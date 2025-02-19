@@ -30,21 +30,17 @@ Manages product catalog, inventory, and image storage. Exposes GraphQL (read) an
 
 ### Tech Stack:
 
-Language: Scala
+- Language: Scala
 
-Framework: Play Framework
-
-Database: PostgreSQL (Slick ORM)
-
-Integrations: Redis (cache), AWS S3 (pre-signed URLs), Kafka (product events)
+- Framework: Play Framework
+- Database: PostgreSQL (Slick ORM)
+- Integrations: Redis (cache), AWS S3 (pre-signed URLs), Kafka (product events)
 
 ### Key Features:
 
-GraphQL schema with filters (price range, category)
-
-Admin RBAC enforcement via JWT claims
-
-Event sourcing for product lifecycle tracking
+- GraphQL schema with filters (price range, category)
+- Admin RBAC enforcement via JWT claims
+- Event sourcing for product lifecycle tracking
 
 ```bash
   git clone https://github.com/OCG-WebStore/product-inventory
@@ -54,21 +50,16 @@ Central authentication service with JWT/OAuth2 support. Manages user roles (admi
 
 ### Tech Stack:
 
-Language: Java
-
-Framework: Spring Boot
-
-Database: PostgreSQL (Spring Data JPA)
-
-Integrations: Keycloak (OAuth2), Redis (token revocation)
+- Language: Java
+- Framework: Spring Boot
+- Database: PostgreSQL (Spring Data JPA)
+- Integrations: Keycloak (OAuth2), Redis (token revocation)
 
 ### Key Features:
 
-Social logins (Google/GitHub)
-
-Refresh token rotation
-
-Passwordless authentication workflows
+- Social logins (Google/GitHub)
+- Refresh token rotation
+- Passwordless authentication workflows
 
 ```bash
   git clone https://github.com/yourusername/user-management
@@ -78,21 +69,16 @@ Handles order lifecycle, price negotiations, event sourcing and a unique custome
 
 ### Tech Stack:
 
-Language: Scala
-
-Framework: Play Framework
-
-Database: PostgreSQL (Slick)
-
-Integrations: Kafka Streams, Payment Service, Product Inventory
+- Language: Scala
+- Framework: Play Framework
+- Database: PostgreSQL (Slick)
+- Integrations: Kafka Streams, Payment Service, Product Inventory
 
 ### Key Features:
 
-State machines for order status transitions
-
-Circuit breakers for payment service resilience
-
-Materialized views for fast GraphQL queries
+- State machines for order status transitions
+- Circuit breakers for payment service resilience
+- Materialized views for fast GraphQL queries
 
 ```bash
     git clone https://github.com/yourusername/order-service
@@ -102,21 +88,16 @@ Real-time order negotiation system with WebSocket support.
 
 ### Tech Stack:
 
-Language: Scala
-
-Framework: Play Framework (Akka Actors)
-
-Database: MongoDB (ReactiveMongo)
-
-Integrations: Kafka (price change events)
+- Language: Scala
+- Framework: Play Framework (Akka Actors)
+- Database: MongoDB (ReactiveMongo)
+- Integrations: Kafka (price change events)
 
 ### Key Features:
 
-WebSocket sessions with JWT authentication
-
-Auto-deletion of chats 48 hours after order completion
-
-System messages for price change approvals
+- WebSocket sessions with JWT authentication
+- Auto-deletion of chats 48 hours after order completion
+- System messages for price change approvals
 
 ```bash
     git clone https://github.com/yourusername/chat-service
@@ -126,21 +107,16 @@ Idempotent payment processing with support for Stripe/PayPal.
 
 ### Tech Stack:
 
-Language: Java
-
-Framework: Spring Boot
-
-Database: PostgreSQL
-
-Integrations: Stripe API, Order Service
+- Language: Java
+- Framework: Spring Boot
+- Database: PostgreSQL
+- Integrations: Stripe API, Order Service
 
 ### Key Features:
 
-Idempotency keys for duplicate request prevention
-
-Audit logs for compliance
-
-Refund workflows with SLA tracking
+- Idempotency keys for duplicate request prevention
+- Audit logs for compliance
+- Refund workflows with SLA tracking
 
 ```bash
     git clone https://github.com/yourusername/payment-service
@@ -150,19 +126,15 @@ OCG WebStor API Gateway. Unified entry point with JWT validation and GraphQL fed
 
 ### Tech Stack:
 
-Language: Java
-
-Framework: Spring Cloud Gateway
-
-Integrations: GraphQL Apollo Federation
+- Language: Java
+- Framework: Spring Cloud Gateway
+- Integrations: GraphQL Apollo Federation
 
 ### Key Features:
 
-Rate limiting (Redis)
-
-Request/response logging
-
-Circuit breaker patterns
+- Rate limiting (Redis)
+- Request/response logging
+- Circuit breaker patterns
 
 ```bash
     git clone https://github.com/yourusername/ocgate
@@ -172,20 +144,39 @@ Backend for admin dashboard.
 
 ### Tech Stack:
 
-Language: Scala
-
-Framework: Play Framework
-
-Integrations: Grafana, Loki
+- Language: Scala
+- Framework: Play Framework
+- Integrations: Grafana, Loki
 
 ### Key Features:
 
-Bulk product imports/exports (CSV/Excel)
-
-User role management
-
-System health monitoring
+- Bulk product imports/exports (CSV/Excel)
+- User role management
+- System health monitoring
 
 ```bash
   git clone https://github.com/yourusername/admin-service
+```
+## 8. Notification Service
+Handles real-time user notifications across critical e-commerce workflows. Subscribes to Kafka events to trigger alerts for inventory changes, order milestones, and pending actions.
+
+### Tech Stack:
+
+- Language: Scala
+- Framework: Play Framework (Akka Streams for Kafka integration)
+- Database: PostgreSQL (Slick ORM for notification history)
+- Integrations: Kafka, Firebase Cloud Messaging (mobile), WebSocket
+
+### Key Features:
+
+- Event-driven notifications for:
+  - Inventory stock updates (low stock/restock alerts)<br>
+  - Order creation/completion status 
+  - Customization approval reminders (24h timeout)
+- Multi-channel delivery (email, WebSocket, mobile push)
+- Notification templating with user personalization
+- Deduplication to prevent event replay duplicates
+
+```bash
+    git clone https://github.com/yourusername/notification-service
 ```
