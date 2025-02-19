@@ -14,8 +14,9 @@ A scalable, event-driven high-end fashion platform built with Java (Spring Boot)
 <img src="https://img.shields.io/badge/Scala-DF3E36?logo=scala&logoColor=white" alt="Scala"> <img src="https://img.shields.io/badge/Java-ED8B00?logo=java&logoColor=white" alt="Java"> <img src="https://img.shields.io/badge/Spring_Boot-6DB33F?logo=springboot&logoColor=white" alt="Spring Boot"> <img src="https://img.shields.io/badge/Play_Framework-000000?logo=playframework&logoColor=white" alt="Play">
 <img src="https://img.shields.io/badge/PostgreSQL-4169E1?logo=postgresql&logoColor=white" alt="PostgreSQL"> <img src="https://img.shields.io/badge/Kafka-231F20?logo=apachekafka&logoColor=white" alt="Kafka"> <img src="https://img.shields.io/badge/Redis-FF0000?logo=redis&logoColor=white" alt="Redis">
 
+mermaidjs
 ## Architecture Diagram
-![There should be a diagram here](https://github.com/OCG-WebStore/.github/profile/Architecture.png)
+![There should be a diagram here](https://github.com/OCG-WebStore/.github/blob/main/profile/Architecture.png?raw=true)
 
 # Service Repositories:
 ## 1. Product Service
