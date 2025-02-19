@@ -2,19 +2,15 @@
 # OCG WebStore
 A scalable, event-driven high-end fashion platform built with Java (Spring Boot) and Scala (Play Framework). Implements modern microservices patterns including CQRS, event sourcing, and real-time communication.
 
-# Important notice:
+## Important notice:
 ### At this time this serves just as a project plan for OCG WebStore and most of the content referenced here is not yet implemented. <br>
-### Key changes might be made during the process of implementation. <br>
+### Key changes might be made during the process of implementation. Some of the service repositories are not yet available on GitHub. <br>
 ### Currently under development: <br>
 #### Product service: https://github.com/OCG-WebStore/product-service
 
 ## Key Features:
 
-#### Microservices Architecture: 7 services with isolated responsibilities.
-#### Event-Driven Workflows: Apache Kafka for order processing, price negotiations, and inventory updates.
-#### Security: JWT/OAuth2 authentication, RBAC, and secrets management.
-#### Infrastructure-as-Code: Terraform + Kubernetes deployment (AWS/GCP).
-#### Observability: Grafana dashboards, Loki logging, and distributed tracing.
+#### Microservices Architecture: 7 services with isolated responsibilities. <br> Event-Driven Workflows: Apache Kafka for order processing, price negotiations, and inventory updates.<br>Security: JWT/OAuth2 authentication, RBAC, and secrets management.<br>Infrastructure-as-Code: Terraform + Kubernetes deployment (AWS/GCP).<br>Observability: Grafana dashboards, Loki logging, and distributed tracing.
 
 
 ### Tech Stack:
