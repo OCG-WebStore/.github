@@ -6,7 +6,7 @@ A scalable, event-driven high-end fashion platform built with Java (Spring Boot)
 ### At this time this serves just as a project plan for OCG WebStore and most of the content referenced here is not yet implemented. <br>
 ### Key changes might be made during the process of implementation. Some of the service repositories are not yet available on GitHub. <br>
 ### Currently under development: <br>
-#### Product service: https://github.com/OCG-WebStore/product-service
+#### Product Inventory: https://github.com/OCG-WebStore/product-inventory
 
 ## Key Features:
 
@@ -25,7 +25,7 @@ A scalable, event-driven high-end fashion platform built with Java (Spring Boot)
 ![There should be a diagram here](https://github.com/OCG-WebStore/.github/blob/main/profile/Architecture.png?raw=true)
 
 # Service Repositories:
-## 1. Product Service
+## 1. Product Inventory
 Manages product catalog, inventory, and image storage. Exposes GraphQL (read) and REST (admin CRUD) APIs.
 
 ### Tech Stack:
@@ -47,9 +47,9 @@ Admin RBAC enforcement via JWT claims
 Event sourcing for product lifecycle tracking
 
 ```bash
-  git clone https://github.com/OCG-WebStore/product-service
+  git clone https://github.com/OCG-WebStore/product-inventory
 ```
-## 2. User Service
+## 2. User Managment
 Central authentication service with JWT/OAuth2 support. Manages user roles (admin/customer/designer).
 
 ### Tech Stack:
@@ -71,7 +71,7 @@ Refresh token rotation
 Passwordless authentication workflows
 
 ```bash
-  git clone https://github.com/yourusername/user-service
+  git clone https://github.com/yourusername/user-management
 ```
 ## 3. Order Service
 Handles order lifecycle, price negotiations, event sourcing and a unique customer-oriented order panel.
@@ -84,7 +84,7 @@ Framework: Play Framework
 
 Database: PostgreSQL (Slick)
 
-Integrations: Kafka Streams, Payment Service, Product Service
+Integrations: Kafka Streams, Payment Service, Product Inventory
 
 ### Key Features:
 
@@ -145,8 +145,8 @@ Refund workflows with SLA tracking
 ```bash
     git clone https://github.com/yourusername/payment-service
 ```
-## 6. API Gateway
-Unified entry point with JWT validation and GraphQL federation.
+## 6. OCGate
+OCG WebStor API Gateway. Unified entry point with JWT validation and GraphQL federation.
 
 ### Tech Stack:
 
@@ -165,7 +165,7 @@ Request/response logging
 Circuit breaker patterns
 
 ```bash
-    git clone https://github.com/yourusername/api-gateway
+    git clone https://github.com/yourusername/ocgate
 ```
 ## 7. Admin Service
 Backend for admin dashboard.
