@@ -122,7 +122,7 @@ Idempotent payment processing with support for Stripe/PayPal.
     git clone https://github.com/yourusername/payment-service
 ```
 ## 6. OCGate
-OCG WebStor API Gateway. Unified entry point with JWT validation and GraphQL federation.
+OCG WebStore API Gateway. Unified entry point with JWT validation and GraphQL federation.
 
 ### Tech Stack:
 
