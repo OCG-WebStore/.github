@@ -10,7 +10,7 @@ A scalable, event-driven high-end fashion platform built with Java (Spring Boot)
 
 ## Key Features:
 
-#### Microservices Architecture: 7 services with isolated responsibilities. <br> Event-Driven Workflows: Apache Kafka for order processing, price negotiations, and inventory updates.<br>Security: JWT/OAuth2 authentication, RBAC, and secrets management.<br>Infrastructure-as-Code: Terraform + Kubernetes deployment (AWS/GCP).<br>Observability: Grafana dashboards, Loki logging, and distributed tracing.
+#### Microservices Architecture: 8 services with isolated responsibilities. <br> Event-Driven Workflows: Apache Kafka for order processing, price negotiations, and inventory updates.<br>Security: JWT/OAuth2 authentication, RBAC, and secrets management.<br>Infrastructure-as-Code: Terraform + Kubernetes deployment (AWS/GCP).<br>Observability: Grafana dashboards, Loki logging, and distributed tracing.
 
 
 ### Tech Stack:
@@ -31,7 +31,6 @@ Manages product catalog, inventory, and image storage. Exposes GraphQL (read) an
 ### Tech Stack:
 
 - Language: Scala
-
 - Framework: Play Framework
 - Database: PostgreSQL (Slick ORM)
 - Integrations: Redis (cache), AWS S3 (pre-signed URLs), Kafka (product events)
